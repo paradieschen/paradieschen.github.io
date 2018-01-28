@@ -33,5 +33,3 @@ activate :asset_hash
 
 set :haml, format: :html5
 Haml::TempleEngine.disable_option_validator!
-
-set :build_dir, 'docs'
