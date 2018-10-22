@@ -1,58 +1,18 @@
-.text-center
-  %h1.header Hausprojekt Pa*Radieschen
-.container.text-center
-  = image_tag 'paradieschen.jpg', class: 'logo img-fluid'
+.container
+  .logo
+    = image_tag 'paradieschen.jpg', class: 'logo--image img-fluid'
+    %h1.logo--header Pa*radieschen Wohnprojekt
 
-.container.text-center
-  .row.no-gutters
-    .col-md-1
-    .col-md-10.teaser-text
-      %h2 Solidarisches Wohnen in Augsburg
-      %p.lead Finanziert durch Direktkredite. Entprivatisiert über das Mietshäuser Syndikat.
-    .col-md-1
+  .section
+    %h2 Wer wir sind
+    %p
+      Wir sind eine Gruppe von Menschen, die ein Gemeinschaftswohnprojekt in Augsburg realisieren möchten. Uns motiviert die Lust auf ein nachhaltiges und selbstbestimmtes Leben.
 
-.project-story
-  .container
-    .card.mb-3
-      .card-header
-        Wer wir sind
-      .card-body
-        %p.card-text
-          Eine Gruppe von in und um Augsburg lebenden Menschen, die ein Gemeinschaftswohnprojekt realisieren möchten.
-          Uns motiviert die Lust auf ein nachhaltiges und selbstbestimmtes Leben in Augsburg für jede*n! Wir sind stets
-          offen für Interessierte und Menschen, die unsere Vision teilen und mit uns umsetzen möchten.
-    .card.mb-3
-      .card-header
-        … und was wir wollen
-      .card-body
-        %p.card-text
-          Wir wollen gemeinsam, bezahlbar und in solidarischem Miteinander wohnen. Wir möchten einen Ort schaffen, der
-          selbstbestimmtes Wohnen unabhängig von Marktdynamiken und Eigentümer*innenwillkür möglich macht und Raum für
-          emanzipatorische kulturelle und politische Aktivitäten jenseits von Konsum und Kommerz bietet.
-    .card.mb-3
-      .card-header
-        Wie wir das machen wollen
-      .card-body
-        %p.card-text
-          Wir möchten dem profitorientierten Immobilienmarkt ein Haus entziehen und diese Immobilie in eine Art
-          genossenschaftliche Eigentümerstruktur überführen, die eine selbstbestimmte und demokratische Verfügung derer,
-          die in dem Haus leben sicherstellt. Dabei orientieren wir uns bspw. an dem Vorgehen des in Augsburg schon
-          bestehenden Wohnprojekts #{link_to 'Unser Haus e.V.', 'https://unserhausev.wordpress.com/'}, die als Teil des
-          bundesweit organisierten #{link_to 'Mietshäusersyndikats', 'https://www.syndikat.org/de/'} bereits ein Haus
-          erworben und damit dem Zugriff kapitalgetriebener Verwertungsinteressen entzogen haben.
-
-          .embed-responsive.embed-responsive-16by9
-            %iframe.embed-responsive-item(allowfullscreen src='https://player.vimeo.com/video/193034732')
-    .card.mb-3
-      .card-header
-        Mitmachen
-      .card-body
-        %p.card-text
-          Wer Lust auf diese Art gemeinschaftlichen Wohnens hat und sich am Projekt zu beteiligen möchte ist jederzeit
-          herzlich auf unseren regelmäßig stattfindenden Treffen willkommen. Termine erfährst du über
-          #{mail_to 'pa.radieschen@riseup.net', 'pa.radieschen@riseup.net'}. Aktuelle Infos auch bei
-          #{link_to 'Facebook', 'https://fb.com/paradieschen.augsburg'}.
-.footer.container
-  %ul.nav.justify-content-end
-    %li.nav-item
-      = link_to 'Impressum', '/imprint/', class: 'nav-link'
+  .section
+    %h2 Was wir wollen
+    %p
+      Wir wollen gemeinsam, bezahlbar und in solidarischem Miteinander wohnen. Wir möchten einen Ort schaffen, der selbstbestimmtes Wohnen unabhängig von Marktdynamiken und Eigentümer*innenwillkür möglich macht. Weiter soll dieser Raum für emanzipatorische kulturelle und politische Aktivitäten jenseits von Konsum und Kommerz bieten.
+  .section
+    %h2 Wie wir das machen wollen
+    %p
+      Wir möchten Wohnraum kaufen, in dem langfristig finanzierbare Mieten möglich sind. Dieser soll uns und allen anderen Interessent*innen die Möglichkeit zur gemeinsamen Umsetzung sozialer Ziele bieten. Im Zusammenschluss mit dem #{link_to 'Mietshäuser Syndikat', 'https://www.syndikat.org/de/', target: '_blank'} garantieren wir, dass dieser Ort auch in Zukunft bestehen bleibt.

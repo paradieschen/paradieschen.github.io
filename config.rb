@@ -1,35 +1,22 @@
-# Activate and configure extensions
-# https://middlemanapp.com/advanced/configuration/#configuring-extensions
-
 activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
+  prefix.browsers = 'last 2 versions'
 end
 
-# Layouts
-# https://middlemanapp.com/basics/layouts/
-
-# Per-page layout changes
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
-
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
-
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+activate :livereload
+activate :sprockets
+activate :directory_indexes
 
 configure :build do
   activate :minify_css
   activate :minify_javascript
+  activate :asset_hash
 end
 
-activate :directory_indexes
-activate :asset_hash
+# Middleman fails to reload helpers, although it notices their modification
+# This force-reloads them
+Dir['helpers/*'].each(&method(:load))
 
+# Disable warnings
 set :haml, format: :html5
+set :fonts_dir, 'fonts'
 Haml::TempleEngine.disable_option_validator!

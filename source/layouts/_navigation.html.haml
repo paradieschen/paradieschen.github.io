@@ -1,0 +1,18 @@
+%nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-info
+  .container
+    = link_to 'Pa*radieschen', '/', class: 'navbar-brand mr-5'
+    %button.navbar-toggler{"aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarCollapse.collapse.navbar-collapse
+      %ul.navbar-nav.mr-auto
+        %li.nav-item{class: active_nav_item?(:index) ? 'active' : ''}
+          = link_to 'Home', '/', class: 'nav-link'
+        %li.nav-item{class: active_nav_item?(:self_concept) ? 'active' : ''}
+          = link_to 'Selbstverständnis', '/self_concept', class: 'nav-link'
+        %li.nav-item{class: active_nav_item?(:concept) ? 'active' : ''}
+          = link_to 'Konzept', '/concept', class: 'nav-link'
+        %li.nav-item{class: active_nav_item?(:funding) ? 'active' : ''}
+          = link_to 'Finanzierung', '/funding', class: 'nav-link'
+      %ul.navbar-nav
+        %li.nav-item{class: active_nav_item?(:contact) ? 'active' : ''}
+          = link_to 'Kontakt', '/contact', class: 'nav-link'

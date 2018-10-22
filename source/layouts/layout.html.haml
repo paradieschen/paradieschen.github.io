@@ -5,16 +5,13 @@
     %meta{charset: 'utf-8'}
     %meta{content: 'ie=edge', 'http-equiv' => 'x-ua-compatible'}
     %meta{content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}
-    %title Hausprojekt Paradieschen
-    = stylesheet_link_tag 'style'
-    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Pacifico'
-    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Cormorant+Garamond'
+    %title Wohnprojekt Pa*radieschen
 
-    = javascript_include_tag 'https://code.jquery.com/jquery-3.2.1.min.js', integrity: 'sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin: 'anonymous'
-    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', integrity: 'sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh', crossorigin: 'anonymous'
-    = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js', integrity: 'sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ', crossorigin: 'anonymous'
+    = stylesheet_link_tag 'style'
     = javascript_include_tag 'application'
 
     = favicon_tag 'images/favicon.ico'
-  %body
-    = yield
+  %body.layout
+    .layout--navigation= partial 'layouts/navigation'
+    .layout--main= yield
+    .layout--footer= partial 'layouts/footer'
